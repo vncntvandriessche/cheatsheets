@@ -1,14 +1,14 @@
-# AWK                                                                                                  #
+# AWK                                                                                                   #
 Based off of "The AWK Programming Language" by Alfred V.Aho, Brian W.Kernighan and Peter J.Weinberger.
 This document pretty much works as memory leverage for the information in the book.
 
 ---
 
-## 1. An AWK tutorial                                                                                  ##
+## 1. An AWK tutorial                                                                                   ##
 
-### 1.1 Getting started                                                                                ###
+### 1.1 Getting started                                                                                 ###
 
-#### Structure                                                                                         ####
+#### Structure                                                                                          ####
 
     BEGIN   { action }
     <Selection> { action }
@@ -17,17 +17,17 @@ This document pretty much works as memory leverage for the information in the bo
     END     { action }
 
 
-### 1.2 Simple output                                                                                  ###
+### 1.2 Simple output                                                                                   ###
 
 print
 
 
-### 1.3 Fancier ouput                                                                                  ###
+### 1.3 Fancier ouput                                                                                   ###
 
 printf
 
 
-### 1.4 Selection                                                                                      ###
+### 1.4 Selection                                                                                       ###
 > Selection patterns can be conbined with logical operators
 
   - Selection by comparison
@@ -42,12 +42,12 @@ printf
 > END {}
 
 
-### 1.5 Computing with AWK                                                                             ###
+### 1.5 Computing with AWK                                                                              ###
 
 length(<var>), NF, NR, ...
 
 
-### 1.6 Control-Flow Statements                                                                        ###
+### 1.6 Control-Flow Statements                                                                         ###
 
   1. _if_
 
@@ -81,12 +81,12 @@ length(<var>), NF, NR, ...
         }
 
 
-### 1.7 Arrays                                                                                         ###
+### 1.7 Arrays                                                                                          ###
 
         <array name>[<element number>]
 
 
-### 1.8 One-liners                                                                                     ###
+### 1.8 One-liners                                                                                      ###
 
         { print $NF }
 > Print last field of every line.
@@ -102,18 +102,23 @@ length(<var>), NF, NR, ...
 
 
 
-## 2. The AWK language                                                                                 ##
+## 2. The AWK language                                                                                  ##
 
-### 2.1 Patterns                                                                                       ###
-### 2.2 Actions                                                                                        ###
-### 2.3 User-Defined Functions                                                                         ###
-### 2.4 Output                                                                                         ###
-### 2.5 Input                                                                                          ###
-### 2.6 Interaction with other programs                                                                ###
+### 2.1 Patterns                                                                                        ###
+### 2.2 Actions                                                                                         ###
+### 2.3 User-Defined Functions                                                                          ###
+### 2.4 Output                                                                                          ###
+### 2.5 Input                                                                                           ###
+### 2.6 Interaction with other programs                                                                 ###
 
-## 3. Data processing                                                                                  ##
-## 4. Reports and databases                                                                            ##
-## 5. Processing words                                                                                 ##
-## 6. Little languages                                                                                 ##
-## 7. Experiments with algorithms                                                                      ##
-## 8. EPILOG                                                                                           ##
+## 3. Data processing                                                                                   ##
+## 4. Reports and databases                                                                             ##
+## 5. Processing words                                                                                  ##
+## 6. Little languages                                                                                  ##
+## 7. Experiments with algorithms                                                                       ##
+## 8. EPILOG                                                                                            ##
+
+## 9. More: One-liners                                                                                  ##
+
+         awk -F ':' ' $3 >= 1000 && $3 <= 59999 { print $1 }' /etc/passwd
+> Print the users within the dynamically allocated user accounts class (Debian plicy)
