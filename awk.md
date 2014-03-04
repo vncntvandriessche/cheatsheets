@@ -138,6 +138,11 @@ length(<var>), NF, NR, ...
         begpat, endpat {}
 
 
+#### Hint:
+
+  - BEGIN, END and range pattern cannot be combined.
+
+
 ### 2.2 Actions
 ### 2.3 User-Defined Functions
 ### 2.4 Output
