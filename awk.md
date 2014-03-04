@@ -27,7 +27,10 @@ This document pretty much works as memory leverage for the information in the bo
         printf
 
 
+small example:
+
         printf("%20s|%20s\n", firstcolumn, secondcolumn)
+
 
 ### 1.4 Selection
 > Selection patterns can be conbined with logical operators
@@ -144,6 +147,9 @@ length(<var>), NF, NR, ...
 
 
 ### 2.2 Actions
+
+
+
 ### 2.3 User-Defined Functions
 ### 2.4 Output
 ### 2.5 Input
