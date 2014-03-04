@@ -19,13 +19,15 @@ This document pretty much works as memory leverage for the information in the bo
 
 ### 1.2 Simple output
 
-print
+        print
 
 
 ### 1.3 Fancier ouput
 
-printf
+        printf
 
+
+        printf("%20s|%20s\n", firstcolumn, secondcolumn)
 
 ### 1.4 Selection
 > Selection patterns can be conbined with logical operators
@@ -105,6 +107,37 @@ length(<var>), NF, NR, ...
 ## 2. The AWK language
 
 ### 2.1 Patterns
+
+#### Placeholder for operations before the input is read
+
+        BEGIN {}
+
+
+#### Placeholder for operations after all input has been read
+
+        END {}
+
+
+#### Operations get executed at pattern match
+
+        <expression> {}
+
+
+#### Operations get executed at regular expression match
+
+        </expression/> {}
+
+
+#### Operations get executed when compound pattern match
+
+        <statement || && ... statement> {}
+
+
+#### Range pattern: Defines a beginning of a specific occurence and the end, statements get executed within said range
+
+        begpat, endpat {}
+
+
 ### 2.2 Actions
 ### 2.3 User-Defined Functions
 ### 2.4 Output
