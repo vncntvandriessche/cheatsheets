@@ -165,4 +165,4 @@ length(<var>), NF, NR, ...
 ## 9. More: One-liners
 
          awk -F ':' ' $3 >= 1000 && $3 <= 59999 { print $1 }' /etc/passwd
-> Print the users within the dynamically allocated user accounts class (Debian plicy)
+> Print the users within the dynamically allocated user accounts class (Debian policy)
