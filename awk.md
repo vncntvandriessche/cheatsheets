@@ -54,7 +54,7 @@ length(<var>), NF, NR, ...
 
 ### 1.6 Control-Flow Statements
 
-  1. _if_
+> if
 
         if ( <boolean [expression]> ) {
                 <statements>
@@ -63,7 +63,7 @@ length(<var>), NF, NR, ...
         }
 
 
-  2. _while_
+> while
 
         position = 1
         while ( position <= $3 ) {
@@ -71,14 +71,14 @@ length(<var>), NF, NR, ...
         }
 
 
-  3. _for_
+> for
 
         for (position = 1; position <= $3; position++) {
                 <statements>
         }
 
 
-  4. _case_
+> case
 
         switch ( <boolean [expression]> ) {
                 case <value>: <statements>;break;
@@ -93,18 +93,24 @@ length(<var>), NF, NR, ...
 
 ### 1.8 One-liners
 
-        { print $NF }
 > Print last field of every line.
 
-        NF > 4
+        { print $NF }
+
+
 > Print every line with more than 4 fields.
 
-        $NF > 4
+        NF > 4
+
+
 > Print every line where the last fields is more than 4.
 
-        { $2 = ""; print }
+        $NF > 4
+
+
 > Print every line with the second field truncated.
 
+        { $2 = ""; print }
 
 
 ## 2. The AWK language
@@ -164,5 +170,6 @@ length(<var>), NF, NR, ...
 
 ## 9. More: One-liners
 
-         awk -F ':' ' $3 >= 1000 && $3 <= 59999 { print $1 }' /etc/passwd
 > Print the users within the dynamically allocated user accounts class (Debian policy)
+
+         awk -F ':' ' $3 >= 1000 && $3 <= 59999 { print $1 }' /etc/passwd
