@@ -37,14 +37,15 @@ small example:
 
   - Selection by comparison
   - Selection by computation
-> Comparison with computation
-
   - Selection by text content
-> Both regular expressions and plain
+  - Selection by keyword:
 
-  - Selection by keyword
-> BEGIN {}
-> END {}
+Examples
+
+    BEGIN {}
+
+
+    END {}
 
 
 ### 1.5 Computing with AWK
