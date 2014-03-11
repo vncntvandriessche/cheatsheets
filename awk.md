@@ -22,7 +22,7 @@ This document pretty much works as memory leverage for the information in the bo
         print
 
 
-### 1.3 Fancier ouput
+### 1.3 Fancier output
 
         printf
 
@@ -33,7 +33,7 @@ small example:
 
 
 ### 1.4 Selection
-> Selection patterns can be conbined with logical operators
+> Selection patterns can be combined with logical operators
 
   - Selection by comparison
   - Selection by computation
@@ -136,7 +136,7 @@ length(<var>), NF, NR, ...
         <statement || && ... statement> {}
 
 
-#### Range pattern: Defines a beginning of a specific occurence and the end, statements get executed within said range
+#### Range pattern: Defines a beginning of a specific occurrence and the end, statements get executed within said range
 
         begpat, endpat {}
 
