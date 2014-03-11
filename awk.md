@@ -19,17 +19,17 @@ This document pretty much works as memory leverage for the information in the bo
 
 ### 1.2 Simple output
 
-        print
+    print
 
 
 ### 1.3 Fancier output
 
-        printf
+    printf
 
 
 small example:
 
-        printf("%20s|%20s\n", firstcolumn, secondcolumn)
+    printf("%20s|%20s\n", firstcolumn, secondcolumn)
 
 
 ### 1.4 Selection
@@ -56,61 +56,61 @@ length(<var>), NF, NR, ...
 
 > if
 
-        if ( <boolean [expression]> ) {
-                <statements>
-        } else {
-                <statements>
-        }
+    if ( <boolean [expression]> ) {
+            <statements>
+    } else {
+            <statements>
+    }
 
 
 > while
 
-        position = 1
-        while ( position <= $3 ) {
-                <statements>
-        }
+    position = 1
+    while ( position <= $3 ) {
+            <statements>
+    }
 
 
 > for
 
-        for (position = 1; position <= $3; position++) {
-                <statements>
-        }
+    for (position = 1; position <= $3; position++) {
+            <statements>
+    }
 
 
 > case
 
-        switch ( <boolean [expression]> ) {
-                case <value>: <statements>;break;
-                ...
-        }
+    switch ( <boolean [expression]> ) {
+            case <value>: <statements>;break;
+            ...
+    }
 
 
 ### 1.7 Arrays
 
-        <array name>[<element number>]
+    <array name>[<element number>]
 
 
 ### 1.8 One-liners
 
 > Print last field of every line.
 
-        { print $NF }
+    { print $NF }
 
 
 > Print every line with more than 4 fields.
 
-        NF > 4
+    NF > 4
 
 
 > Print every line where the last fields is more than 4.
 
-        $NF > 4
+    $NF > 4
 
 
 > Print every line with the second field truncated.
 
-        { $2 = ""; print }
+    { $2 = ""; print }
 
 
 ## 2. The AWK language
@@ -119,32 +119,32 @@ length(<var>), NF, NR, ...
 
 #### Placeholder for operations before the input is read
 
-        BEGIN {}
+    BEGIN {}
 
 
 #### Placeholder for operations after all input has been read
 
-        END {}
+    END {}
 
 
 #### Operations get executed at pattern match
 
-        <expression> {}
+    <expression> {}
 
 
 #### Operations get executed at regular expression match
 
-        </expression/> {}
+    </expression/> {}
 
 
 #### Operations get executed when compound pattern match
 
-        <statement || && ... statement> {}
+    <statement || && ... statement> {}
 
 
 #### Range pattern: Defines a beginning of a specific occurrence and the end, statements get executed within said range
 
-        begpat, endpat {}
+    begpat, endpat {}
 
 
 #### Hint:
@@ -172,4 +172,4 @@ length(<var>), NF, NR, ...
 
 > Print the users within the dynamically allocated user accounts class (Debian policy)
 
-         awk -F ':' ' $3 >= 1000 && $3 <= 59999 { print $1 }' /etc/passwd
+     awk -F ':' ' $3 >= 1000 && $3 <= 59999 { print $1 }' /etc/passwd
